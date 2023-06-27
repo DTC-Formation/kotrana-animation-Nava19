@@ -1,6 +1,5 @@
 
 @media only screen  and (max-width:600px){
-  
 
 }
 @media only screen  and (min-width:600px){
@@ -30,7 +29,7 @@ td {
   padding: 8px;
   text-align: center;
   background-color: #E8DBC5;
-  height: 120px;
+  height: 163px;
   width: 250px;
 }
 
@@ -309,7 +308,7 @@ button {
 @keyframes my-animation {
   from {
     background-color: #ff7a59;
-    width: 200px;
+    width: 100px;
     top: 10px;
   }
 
