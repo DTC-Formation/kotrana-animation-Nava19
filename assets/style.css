@@ -612,14 +612,78 @@ animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
   background-color: #ff7a59; }
 }
 .slide-in {
+  margin:80px auto;
+  width: 80px;
+  height: 80px;
   transform: translateX(-100%);
-  animation: slideIn 2s ease-in forwards;
+  animation: slideIn 2s ease-in infinite;
 }
 
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
+    background-color: #8D6B94;
+
   }
   100% {
     transform: translateX(0);
+    background-color: #ff7a59;
   }
+}
+.fade-in {
+  margin:80px auto;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  border-radius: 50%;
+  animation: fadeIn 2s ease-in infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    background-color: #8D6B94;
+  }
+  100% {
+    opacity: 1;
+    background-color: #ff7a59;
+  }
+}
+.bounce {
+  margin:80px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    background-color: #8D6B94;
+  }
+  50% {
+    transform: translateY(-20px);
+    background-color: #ff7a59;
+  }
+}
+.bounce-and-rotate {
+  margin:80px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: bounceAndRotate 1s ease-in-out infinite;
+}
+
+@keyframes bounceAndRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+    background-color: #8D6B94;
+  }
+  50% {
+    transform: translateY(-20px) rotate(360deg);
+    background-color: #ff7a59;
+  }
+}
+
+
