@@ -25,11 +25,11 @@ table {
 }
 
 td {
-  border: 4px solid #8D6B94;
+  border-top: 4px solid #8D6B94;
   padding: 8px;
   text-align: center;
-  background-color: #E8DBC5;
-  height: 163px;
+  background-color: #000;
+  height: 255px;
   width: 250px;
 }
 
@@ -193,7 +193,7 @@ button {
 }
 
 
-.container {
+.content {
   position: relative;
   width: 100px;
   height: 100px;
@@ -231,7 +231,7 @@ button {
   }
 }
 
-.container {
+.containt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,3 +318,308 @@ button {
     top: 100px;
   }
 }
+.slide-in-out{
+    animation: slide-in-out 2s infinite alternate;
+    height: 50px;
+    border-radius: 10px;
+  
+  }
+  
+  @keyframes slide-in-out {
+    0% { 
+      transform: translateX(-100%);
+      background-color: #8D6B94;
+    }
+    100% { 
+      transform: translateX(0); 
+      background-color: #ff7a59;
+    }
+  }
+  .spin {
+    margin:80px auto;
+    width: 60px;
+    height: 60px;
+    position:relative;
+    animation: spin 2s infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); 
+      background-color: #8D6B94;
+      }
+    100% { transform: rotate(360deg);
+    background-color: #ff7a59; }
+  }
+  .container{
+    margin:80px auto;
+    width: 60px;
+    height: 60px;
+    position:relative;
+    transform-origin:center bottom;
+    animation-name: flicker;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .flame{
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+  }
+  
+  .yellow{
+    left:15px; 
+    width: 30px;
+    height: 30px;
+    background:gold;
+    box-shadow: 0px 0px 9px 4px gold;
+  }
+  
+  .orange{
+    left:10px; 
+    width: 40px;
+    height: 40px;
+    background:orange;
+    box-shadow: 0px 0px 9px 4px orange;
+  }
+  
+  .red{
+    left:5px;
+    width: 50px;
+    height: 50px;
+    background:OrangeRed;
+    box-shadow: 0px 0px 5px 4px OrangeRed;
+  }
+  
+  .white{
+    left:15px; 
+    bottom:-4px;
+    width: 30px;
+    height: 30px;
+    background:white;
+    box-shadow: 0px 0px 9px 4px white;
+  }
+  
+  .circle{
+    border-radius: 50%;
+    position:absolute;  
+  }
+  
+  .blue{
+    width: 10px;
+    height: 10px;
+    left:25px;
+    bottom:-25px; 
+    background: SlateBlue;
+    box-shadow: 0px 0px 15px 10px SlateBlue;
+  }
+  
+  .black{
+    width: 40px;
+    height: 40px;
+    left:10px;
+    bottom:-60px;  
+    background: black;
+    box-shadow: 0px 0px 15px 10px black;
+  }
+  
+  @keyframes flicker{
+    0%   {transform: rotate(-1deg);}
+    20%  {transform: rotate(1deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(1deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(1deg);}
+  }
+  .item1{
+    background-color: #8D6B94;
+    
+    position: relative; 
+    width: 50px;
+    height: 20px; 
+    border-top: 5px solid black;
+    animation: spine 10s infinite;
+   animation-fill-mode: forwards;
+  }
+  .item{
+    border: 1px solid black;
+}
+@keyframes spine{
+
+0%{
+ opacity: o;
+ width: 0%;
+}
+25%{
+    opacity: 0,2;
+    width: 25%;
+    
+}
+50%{
+    opacity: 0,5;
+    width: 50%;
+}
+75%{
+    opacity: 0,7;
+    width: 75%;
+}
+100%{
+    opacity: 1;
+    width: 100%;
+}
+}
+
+#html-spinner{
+  width:40px;
+  height:40px;
+  border:4px solid #8D6B94;
+  border-top:4px solid white;
+  border-radius:50%;
+  margin: auto;
+}
+
+#html-spinner{
+  -webkit-transition-property: -webkit-transform;
+  -webkit-animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  
+  -moz-transition-property: -moz-transform;
+  -moz-animation-name: rotate; 
+  -moz-animation-duration: 1.2s; 
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  
+  transition-property: transform;
+  animation-name: rotate; 
+  animation-duration: 1.2s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.bg {
+
+position: absolute;
+top: 9px;
+left: 8px;
+right: 8px;
+bottom: 8px;
+  background-size: contain;
+}
+
+.bar {
+  position: relative;
+  height: 8px;
+  background: #6a6a6a;
+  width:  0%;
+  top: 0px;
+  left: 18px;
+  margin-top: 8px;
+  box-shadow: 0 0 3px rgba(192,192,192,0.9);
+  animation: fill 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill1 {
+animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill2 {
+ animation:  fill-2 5s infinite alternate, colors 5s infinite alternate;
+}
+
+
+.bar.fill3 {
+ animation:  fill-3 5s infinite alternate, colors 5s infinite alternate;
+}
+
+
+.bar.fill4 {
+ animation:  fill-4 5s infinite alternate, colors 5s infinite alternate;
+}
+@keyframes fill {
+  0%   { width: 0; }
+  33%  { width: 30px;}
+  66%  { width: 10px;}
+  100% { width: 105px; }
+}
+
+@keyframes fill-1 {
+  0%   { width: 0; }
+  33%  { width: 50px;}
+  66%  { width: 20px;}
+  100% { width: 130px; }
+}
+
+@keyframes fill-2 {
+  0%   { width: 0; }
+  33%  { width: 90px;}
+  66%  { width: 70px;}
+  100% { width: 136px; }
+}
+
+@keyframes fill-3 {
+  0%   { width: 0; }
+  33%  { width: 50px;}
+  66%  { width: 24px;}
+  100% { width: 109px; }
+}
+
+@keyframes fill-4 {
+  0%   { width: 0; }
+  33%  { width: 98px;}
+  66%  { width: 34px;}
+  100% { width: 99px; }
+}
+@keyframes colors {
+  0% { background-color: #5a5a5a;}
+  50% { background-color: white;}
+  100% { background-color: #6a6a6a;}
+}
+.demi {
+  margin:80px auto;
+  width: 80px;
+  height: 80px;
+  position:relative;
+  animation: demi 2s infinite;
+}
+
+@keyframes demi {
+  0% { transform: rotate(0deg); 
+    background-color: #8D6B94;
+    }
+  100% { transform: rotate(180deg);
+  background-color: #ff7a59; }
+}
+.slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 2s ease-in forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
